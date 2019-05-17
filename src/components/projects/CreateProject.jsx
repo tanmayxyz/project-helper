@@ -18,19 +18,23 @@ export class CreateProject extends Component {
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit} className="white">
-          <h5 className="grey-text text-darken-3">Sign in</h5>
+          <h5 className="grey-text text-darken-3">Create Project</h5>
           <div className="input-field">
-            <label htmlFor="email">email</label>
-            <input type="email" id="email" onChange={this.handleChange} />
+            <label htmlFor="title">Title</label>
+            <input type="text" id="title" onChange={this.handleChange} />
           </div>
 
           <div className="input-field">
-            <label htmlFor="password">password</label>
-            <input type="password" id="password" onChange={this.handleChange} />
+            <label htmlFor="content">project content</label>
+            <textarea
+              id="content"
+              className="materialize-textarea"
+              onChange={this.handleChange}
+            />
           </div>
 
           <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">logIn</button>
+            <button className="btn pink lighten-1 z-depth-0">Create</button>
           </div>
         </form>
       </div>
